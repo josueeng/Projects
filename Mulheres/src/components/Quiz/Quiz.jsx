@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import * as Q from './Quiz.styled';
 import coroa from '../../assets/Imagens/coroa.png';
+
 export default function Quiz() {
   const [women, setWomen] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -83,7 +84,13 @@ export default function Quiz() {
       <p>{currentQuestion.ano_nascimento} - {currentQuestion.ano_morte}</p>
       <div>
         {shuffledAnswers.map((answer, index) => (
-          <button key={index} onClick={() => handleAnswer(answer)}>{answer}</button>
+          <button
+            key={index}
+            onClick={() => handleAnswer(answer)}
+            style={{ backgroundColor: 'transparent', border: '1px solid white', padding: '10px', margin: '5px', cursor: 'pointer' }}
+          >
+            {answer}
+          </button>
         ))}
       </div>
       {selectedAnswer && (
