@@ -87,7 +87,7 @@ export default function Quiz() {
           <button
             key={index}
             onClick={() => handleAnswer(answer)}
-            style={{ backgroundColor: 'transparent', border: '1px solid white', padding: '10px', margin: '5px', cursor: 'pointer' }}
+            style={{ backgroundColor: 'transparent',color:"white", border: '1px solid white', padding: '10px', margin: '5px', cursor: 'pointer' }}
           >
             {answer}
           </button>
