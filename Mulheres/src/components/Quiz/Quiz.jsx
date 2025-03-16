@@ -82,12 +82,12 @@ export default function Quiz() {
       <h1 style={{ fontSize: "25px" }}>Quiz do Legado Feminino</h1>
       <h2>{currentQuestion.nome}</h2>
       <p>{currentQuestion.ano_nascimento} - {currentQuestion.ano_morte}</p>
-      <div>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         {shuffledAnswers.map((answer, index) => (
           <button
             key={index}
             onClick={() => handleAnswer(answer)}
-            style={{ backgroundColor: 'transparent',color:"white", border: '1px solid white', padding: '10px', margin: '5px', cursor: 'pointer' }}
+            style={{ backgroundColor: 'transparent',color:"white", border: '1px solid white', padding: '10px', margin: '5px', cursor: 'pointer', width:'90%' }}
           >
             {answer}
           </button>
